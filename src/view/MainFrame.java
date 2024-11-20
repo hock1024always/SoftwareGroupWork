@@ -15,6 +15,10 @@ import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
 import controller.CheckInfo;
+//字体效果
+import javax.swing.*;
+import java.awt.*;
+
 
 
 public class MainFrame extends JFrame implements ActionListener {
@@ -35,6 +39,14 @@ public class MainFrame extends JFrame implements ActionListener {
 		super("账号登陆");
 		setLocation(300, 200);
 		setSize(300, 340);
+
+		// 设置默认字体
+		UIManager.put("Label.font", new Font("宋体", Font.PLAIN, 14));
+		UIManager.put("TextField.font", new Font("宋体", Font.PLAIN, 14));
+		UIManager.put("PasswordField.font", new Font("宋体", Font.PLAIN, 14));
+		UIManager.put("Button.font", new Font("宋体", Font.PLAIN, 14));
+		UIManager.put("Choice.font", new Font("宋体", Font.PLAIN, 14));
+
 		contain = new JPanel();
 		contain.setLayout(null);
 		idLabel = new JLabel("ID号");
